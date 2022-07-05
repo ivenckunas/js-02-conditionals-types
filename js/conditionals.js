@@ -31,7 +31,7 @@ if (isUserAdmin === true) {
 //   console.log("asmuo yra nepilnametis");
 // }
 
-let amzius = 0;
+let amzius = 160;
 
 // jei amzius yra 0-17 vaikas
 // jei amzius yra 18-70 suauges
@@ -40,12 +40,14 @@ let amzius = 0;
 // && AndAnd logine sandauga
 // || Or logine sandauga
 
-if (amzius > 0 && amzius < 18) {
+if (amzius <= 0 || amzius > 150) {
+  console.log("kazkas negerai su ivestu amziumi", amzius);
+} else if (amzius > 0 && amzius <= 18) {
   console.log("vaikas");
 } else if (amzius < 70) {
   console.log("suauges");
 } else if (amzius < 150) {
   console.log("senjoras");
 } else {
-  console.log("kazkas negerai", amzius);
+  console.log("kazkas negerai su ivestu amziumi", amzius);
 }
